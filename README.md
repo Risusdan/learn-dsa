@@ -25,7 +25,7 @@ Base on [NeetCode](https://neetcode.io/roadmap).
 ## Arrays & Hashing
 
 - [Summary](./0.ArraysAndHashing/Summary.md)
-- [Contains Duplicate](./0.ArraysAndHashing/ContainsDuplicate/main.cpp)
+- [Contains Duplicate](./0.ArraysAndHashing/ContainsDuplicate/ContainsDuplicate.h)
 - Valid Anagram
 - Two Sum
 - Group Anagrams

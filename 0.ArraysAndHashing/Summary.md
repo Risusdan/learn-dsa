@@ -50,7 +50,83 @@ A hash table is a data structure that allows direct access based on the value of
 - There are many ways to handle collisions, but the most common one is the *chaining method*.
 - The chaining method is to use a linked list to store the elements that map to the same index.
 
+#### Pros
+
+- Fast search, insert, and delete (O(1))
+- Can use various types as keys (integer, string, etc.)
+- Maintains fast performance even when the size of the data is large
+
+#### Cons
+
+- May need to allocate more memory than actually used to prevent collisions
+- Performance heavily depends on the quality of the hash function
+- Need collision resolution strategies
+
 #### Implementations
 
 - In Python, the hash table is usually implemented as a dictionary.
 - In C++, the hash table is usually implemented as an unordered_map.
+
+```cpp
+std::unordered_set<T> set;
+
+// 1. Insertion
+set.insert(value);      // Insert element
+set.emplace(value);     // Construct and insert
+
+// 2. Search
+set.count(value);       // Returns 1 if exists, 0 if not
+set.find(value);        // Returns iterator to element or set.end()
+set.contains(value);    // C++20: Returns true if exists (bool)
+
+// 3. Deletion
+set.erase(value);       // Remove element
+set.clear();            // Remove all elements
+
+// 4. Size Operations
+set.size();            // Number of elements
+set.empty();           // Check if empty
+```
+
+```cpp
+std::unordered_map<Key, Value> map;
+
+// 1. Insertion
+map[key] = value;                // Insert or update
+map.insert({key, value});        // Insert only
+map.emplace(key, value);         // Construct and insert
+map.try_emplace(key, value);     // More efficient insert
+
+// 2. Access/Search
+map[key];                        // Access or create
+map.at(key);                     // Access (throws if not found)
+map.count(key);                  // Returns 1 if exists, 0 if not
+map.find(key);                   // Returns iterator
+map.contains(key);               // C++20: Returns bool
+
+// 3. Deletion
+map.erase(key);                  // Remove element
+map.clear();                     // Remove all elements
+
+// 4. Size Operations
+map.size();                      // Number of elements
+map.empty();                     // Check if empty
+```
+
+Common use cases:
+
+```cpp
+// Using unordered_set for unique collections (just values)
+std::unordered_set<int> seen;
+if (seen.count(value) > 0) {     // Check duplicate
+    // Found duplicate
+}
+seen.insert(value);              // Add new value
+
+// Using unordered_map for key-value associations (when you need to map keys to values)
+std::unordered_map<string, int> freq;
+freq["word"]++;                    // Increment count
+if (freq.find("word") != freq.end()) {  // Check if exists
+    // "word" exists
+}
+```
