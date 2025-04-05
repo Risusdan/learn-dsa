@@ -20,13 +20,12 @@ where n is the size of the input array.
 #ifndef CONTAINSDUPLICATE_H
 #define CONTAINSDUPLICATE_H
 
-#include <vector>
 #include <unordered_set>
+#include <vector>
 
 class ContainsDuplicate {
-public:
-    bool hasDuplicate(std::vector<int>& nums)
-    {
+   public:
+    bool hasDuplicate(std::vector<int>& nums) {
         std::unordered_set<int> hashTable;
         for (const int num : nums) {
             if (hashTable.count(num) > 0) {
@@ -43,4 +42,4 @@ Time Complexity: O(n)
 Space Complexity: O(n)
 */
 
-#endif //CONTAINSDUPLICATE_H
+#endif  //CONTAINSDUPLICATE_H

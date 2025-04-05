@@ -2,31 +2,11 @@
 
 Base on [NeetCode](https://neetcode.io/roadmap).
 
-- [Learn Data Structure and Algorithm](#learn-data-structure-and-algorithm)
-  - [Arrays \& Hashing](#arrays--hashing)
-  - [Stack](#stack)
-  - [Two Pointers](#two-pointers)
-  - [Binary Search](#binary-search)
-  - [Sliding Window](#sliding-window)
-  - [Linked List](#linked-list)
-  - [Trees](#trees)
-  - [Tries](#tries)
-  - [Heap / Priority Queue](#heap--priority-queue)
-  - [Intervals](#intervals)
-  - [Greedy](#greedy)
-  - [Advanced Graphs](#advanced-graphs)
-  - [Backtracking](#backtracking)
-  - [Graphs](#graphs)
-  - [1-D Dynamic Programming](#1-d-dynamic-programming)
-  - [2-D Dynamic Programming](#2-d-dynamic-programming)
-  - [Bit Manipulation](#bit-manipulation)
-  - [Math \& Geometry](#math--geometry)
-
 ## Arrays & Hashing
 
 - [Summary](./0.ArraysAndHashing/Summary.md)
 - [Contains Duplicate](./0.ArraysAndHashing/ContainsDuplicate/ContainsDuplicate.h)
-- Valid Anagram
+- [Valid Anagram](./0.ArraysAndHashing/ValidAnagram/ValidAnagram.h)
 - Two Sum
 - Group Anagrams
 - Top K Frequent Elements
