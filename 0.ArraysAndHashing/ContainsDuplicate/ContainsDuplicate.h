@@ -24,7 +24,7 @@ where n is the size of the input array.
 #include <vector>
 
 class ContainsDuplicate {
-   public:
+public:
     bool hasDuplicate(std::vector<int>& nums) {
         std::unordered_set<int> hashTable;
         for (const int num : nums) {
