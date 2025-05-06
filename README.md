@@ -2,12 +2,26 @@
 
 Base on [NeetCode](https://neetcode.io/roadmap).
 
+## How to run
+
+Open the terminal and run the following command:
+
+```bash
+./run.sh <file_name>
+```
+
+For example, to run the `TwoSum.cpp` file under the `0.ArraysAndHashing` directory, run the following command:
+
+```bash
+./run.sh 0.ArraysAndHashing/TwoSum.cpp
+```
+
 ## Arrays & Hashing
 
-- [Summary](./0.ArraysAndHashing/Summary.md)
-- [Contains Duplicate](./0.ArraysAndHashing/ContainsDuplicate/ContainsDuplicate.h)
-- [Valid Anagram](./0.ArraysAndHashing/ValidAnagram/ValidAnagram.h)
-- Two Sum
+- [Summary](./0.ArraysAndHashing/0.Summary.md)
+- [Contains Duplicate](./0.ArraysAndHashing/ContainsDuplicate.cpp)
+- [Valid Anagram](./0.ArraysAndHashing/ValidAnagram.cpp)
+- [Two Sum](./0.ArraysAndHashing/TwoSum.cpp)
 - Group Anagrams
 - Top K Frequent Elements
 - Encode and Decode Strings
