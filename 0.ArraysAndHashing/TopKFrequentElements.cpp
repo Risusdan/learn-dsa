@@ -51,7 +51,7 @@ public:
         // `priority_queue<Type, Container, Compare>`
         // - `priority_queue<pair<int, int>>`: declares a priority queue that will store pairs of integers: {frequency, number}
         // - `vector<pair<int, int>>`: this specifies the underlying container type
-        // - `greater<pair<int, int>>`: this is a comparator that determines how elements are ordered
+        // - `greater<pair<int, int>>`: this is a comparator that determines how elements are ordered, another option is `less<pair<int, int>>`
         // - `greater` makes it a min heap (smallest elements at top)
         priority_queue<pair<int, int>, 
                         vector<pair<int, int>>,
@@ -60,7 +60,7 @@ public:
 
         // Iterate through the frequency map and push the elements into the min heap
         for (const auto& pair : frequencyMap) {
-            minHeap.push(pair);
+            minHeap.push({pair.second, pair.first});  // push {frequency, number}
             if (minHeap.size() > (size_t)k) {
                 // If the heap size exceeds k, remove the smallest element
                 minHeap.pop();
@@ -80,10 +80,26 @@ public:
 
 int main() {
     Solution solution;
-    vector<int> nums = {1, 2, 2, 3, 3, 3};
-    int k = 2;
-    vector<int> result = solution.topKFrequent(nums, k);
-    for (int num : result) {
+    vector<int> nums1 = {1, 2, 2, 3, 3, 3};
+    int k1 = 2;
+    vector<int> result1 = solution.topKFrequent(nums1, k1);
+    for (int num : result1) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    vector<int> nums2 = {7, 7};
+    int k2 = 1;
+    vector<int> result2 = solution.topKFrequent(nums2, k2);
+    for (int num : result2) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    vector<int> nums3 = {1, 1, 1, 2, 2, 3};
+    int k3 = 2;
+    vector<int> result3 = solution.topKFrequent(nums3, k3);
+    for (int num : result3) {
         cout << num << " ";
     }
     cout << endl;
